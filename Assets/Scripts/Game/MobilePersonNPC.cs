@@ -84,6 +84,7 @@ namespace DaggerfallWorkshop.Game
         public string NameNPC
         {
             get { return (nameNPC); }
+            set { nameNPC = value; }
         }
 
         public int PersonOutfitVariant
