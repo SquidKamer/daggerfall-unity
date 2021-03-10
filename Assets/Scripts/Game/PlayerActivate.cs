@@ -749,14 +749,14 @@ namespace DaggerfallWorkshop.Game
                     if (enemyEntity != null)
                     {
                         MobileEnemy mobileEnemy = enemyEntity.MobileEnemy;
-                        string enemyName = TextManager.Instance.GetLocalizedEnemyName(mobileEnemy.ID);
+                        //string enemyName = TextManager.Instance.GetLocalizedEnemyName(mobileEnemy.ID);
                         bool startsWithVowel = "aeiouAEIOU".Contains(enemyName[0].ToString());
                         string message;
                         if (startsWithVowel)
                             message = TextManager.Instance.GetLocalizedText("youSeeAn");
                         else
                             message = TextManager.Instance.GetLocalizedText("youSeeA");
-                        message = message.Replace("%s", enemyName);
+                        message = message.Replace("%s", enemyEntity.Name);
                         DaggerfallUI.Instance.PopupMessage(message);
                     }
                     break;
